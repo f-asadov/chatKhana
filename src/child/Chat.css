@@ -1,0 +1,84 @@
+.chatWrapper {
+    min-width: 500px;
+    height: 500px;
+    border: 1px solid grey;
+    overflow: hidden;
+    /* Ограничиваем содержимое внутри .chatWrapper */
+}
+
+.chatInner {
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h1 {
+    margin-top: 0px;
+}
+
+.themeList {
+    margin-top: 100px;
+    width: 70%;
+    max-height: 80%;
+    /* Ограничиваем максимальную высоту списка */
+    overflow-y: auto;
+    /* Добавляем вертикальный скролл при необходимости */
+    display: flex;
+    justify-content: start;
+
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.themeList li {
+    transition: .5s all;
+    cursor: pointer;
+    height: fit-content;
+    width: fit-content;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #6738d4b7;
+    padding: 5px 10px;
+    /* Добавим немного отступов вокруг элементов списка */
+}
+
+.themeList li:hover {
+    transition: .5s all;
+    background-color: #6633db;
+}
+
+
+
+.createTheme {
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .5s all;
+    border: 2px solid;
+    border: none;
+    background-color: #6738d4b7;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.5s;
+    font-size: 16px;
+}
+
+.createTheme span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+.createTheme:hover {
+    transition: .5s all;
+    background-color: #6633db;
+}
+
+.createTheme:active {
+    transform: translateY(5px); /* Погружение кнопки на 2px при нажатии */
+     /* Цвет фона при нажатии */
+}
