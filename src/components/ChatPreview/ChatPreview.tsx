@@ -1,8 +1,8 @@
 import React from "react";
-import './Chat.css'
-import Modal from "./ModalChat";
+import './ChatPreview.css'
+import Modal from "../Modal/ModalChat";
 
-const Child1 = () => {
+const ChatPreview = () => {
     const [data, setData] = React.useState<any>([]);
     const [isModalOpen, setIsModalOpen] = React.useState<boolean>(false);
     const openModal = () => {
@@ -47,4 +47,4 @@ const Child1 = () => {
 }
 
 
-export default Child1
+export default ChatPreview

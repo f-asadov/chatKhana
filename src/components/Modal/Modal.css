@@ -1,0 +1,172 @@
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.modalContent {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+
+.createThemeSubmit {
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .5s all;
+    border: 2px solid;
+    border: none;
+    background-color: #6738d4b7;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.5s;
+    font-size: 16px;
+}
+
+.createThemeSubmit span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+.createThemeSubmit:hover {
+    transition: .5s all;
+    background-color: #6633db;
+}
+
+.createThemeSubmit:active {
+    transform: translateY(5px);
+    /* Погружение кнопки на 2px при нажатии */
+    /* Цвет фона при нажатии */
+}
+
+
+
+
+.input-container {
+    position: relative;
+}
+
+.input {
+    font-size: 1em;
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    max-width: 200px;
+    color: #333;
+
+}
+
+.input:hover {
+    background-color: #f2f2f2;
+}
+
+.input:focus {
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input::placeholder {
+    color: #999;
+}
+
+.highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6738d4b7;
+    transition: width 0.3s ease;
+}
+
+.input:focus+.highlight {
+    width: 100%;
+}
+
+/* Optional: Animation on focus */
+@keyframes input-focus {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+    }
+
+    to {
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.input:focus {
+    animation: input-focus 0.3s ease;
+}
+
+
+
+.modalContentTags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:5px
+    /* align-items: center; */
+}
+
+.modalContentTags *+* {
+    border-radius: 10px;
+    border-color: #6738d459;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .7);
+    transition: .5s all ease;
+    
+    /* Исходный цвет фона */
+  }
+  
+  .modalContentTags *+*.active {
+    transition: .5s all ease;
+    color: #fff; /* Цвет текста при активности */
+    background-color: #6633db; /* Новый цвет фона при активности */
+  }
+
+
+.modalContentCloseButton {
+    position: absolute;
+    right: 5px;
+    top:5px;
+    background-image: url('../../images/cancel.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: .5s all ease;
+}
+
+
+
+.modalContentCloseButton:hover {
+    transform: rotate(180deg);
+    transition: .5s all ease;
+}

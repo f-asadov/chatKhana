@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import { AppContext } from './AppContext';
-import Child1 from './child1';
-import Child2 from './child2';
+import ChatPreview from './components/ChatPreview/ChatPreview';
+
+
 
 function App() {
   const [test, setTest] = React.useState<number>(0)
@@ -15,9 +15,9 @@ function App() {
   console.log(test)
 
   return (
-    <AppContext.Provider value={{ test, changeTest }}>
-      <Child1 />
-    </AppContext.Provider>
+    <>
+      <ChatPreview />
+    </>
   );
 }
 
