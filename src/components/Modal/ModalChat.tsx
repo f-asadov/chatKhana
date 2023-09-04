@@ -1,7 +1,10 @@
+import { useMutation } from '@apollo/client';
 import React from 'react';
+import { CREATE_THEME } from '../../apollo/chat_queries';
 import './Modal.css';
 
 const Modal = (props: any) => {
+  const [createTheme,{loading,data,error}] = useMutation(CREATE_THEME)
   const [themeName, setThemeName] = React.useState('');
   const [selectedTags, setSelectedTags] = React.useState<string[]>([]);
 
@@ -18,9 +21,13 @@ const Modal = (props: any) => {
   };
 
   const handleCreateTheme = () => {
-    // Здесь вы можете выполнить действия при создании темы, например, отправить данные на сервер
-    console.log('Theme Name:', themeName);
-    console.log('Selected Tags:', selectedTags);
+    createTheme({
+      variables:{
+        themeName,
+        themeTags:selectedTags
+
+      }
+    })
     props.onClose(); // Закрываем модальное окно после создания темы
   };
 
